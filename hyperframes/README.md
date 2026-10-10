@@ -4,6 +4,26 @@ AI-assisted video creation and editing with [HyperFrames](https://hyperframes.he
 Works for any kind of video: product promos, explainers, talking-head recuts, captions, motion graphics,
 music videos, slideshows and freeform edits.
 
+## Run locally (recommended)
+
+Rendering and preview run entirely on your machine and are free. Prerequisites: Git, Node.js 22+, FFmpeg,
+and the [Claude Code CLI](https://code.claude.com/docs/en/setup) or desktop app.
+
+```bash
+git clone https://github.com/naveen16254/Genufy.git
+cd Genufy
+git checkout claude/hyperframes-claude-code-setup-qi5o80   # until merged into main
+
+hyperframes/scripts/setup-local.sh                          # macOS / Linux
+# powershell -ExecutionPolicy Bypass -File hyperframes\scripts\setup-local.ps1   # Windows
+
+claude                                                      # start Claude Code in the repo root
+```
+
+The HyperFrames skills are already in `.claude/skills/`, so nothing else needs installing.
+To open the Studio preview from another device on your network, use `http://<this-computer's-IP>:3002`
+(allow the port through your firewall if prompted).
+
 ## Start a new video
 
 ```bash
